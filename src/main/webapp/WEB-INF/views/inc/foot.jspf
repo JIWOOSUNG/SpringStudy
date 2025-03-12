@@ -3,7 +3,11 @@
     </div> <!-- .container end -->
 
     <!-- footer start ---------------- -->
+<<<<<<< HEAD
     <div class="footer">
+=======
+    <div class="footer container-fluid p-4 bg-secondary text-center">
+>>>>>>> ce81260 (- Spring MVC 아키텍처 (화면계층/컨트롤러/서비스/영속성계층))
         Footer  @copyright   서울 서초구 1번지  Tel:1577-1234
     </div>
 </body>

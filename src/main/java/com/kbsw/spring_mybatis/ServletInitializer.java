@@ -78,4 +78,8 @@ public class ServletInitializer extends SpringBootServletInitializer{
 
     }
 
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> ce81260 (- Spring MVC 아키텍처 (화면계층/컨트롤러/서비스/영속성계층))

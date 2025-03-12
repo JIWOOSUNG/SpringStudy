@@ -18,13 +18,19 @@
 }
 .wrap ul>li:nth-child(2n+1){
     width:20%;
+<<<<<<< HEAD
     text-align:center;
+=======
+>>>>>>> ce81260 (- Spring MVC 아키텍처 (화면계층/컨트롤러/서비스/영속성계층))
     margin: 8px 0;
 }
 .wrap ul>li:nth-child(2n){
     width:80%;
     margin: 8px 0;
+<<<<<<< HEAD
 
+=======
+>>>>>>> ce81260 (- Spring MVC 아키텍처 (화면계층/컨트롤러/서비스/영속성계층))
 }
 .wrap li input{
     padding:5px;
@@ -39,4 +45,39 @@
 }
 .clear{
     clear:both;
+<<<<<<< HEAD
 }
+=======
+}
+
+#posts{
+    width:100%;
+    margin:0;
+    padding:0;
+}
+#posts>li{
+    list-style:none;
+    float:left;
+    margin:5px 0;
+    height:35px;
+    line-height:35px;
+    border-bottom: 1px solid #ddd;
+}
+#posts>li:nth-child(5n+1){
+    width: 10%;
+}
+#posts>li:nth-child(5n+2){
+    width:40%;
+    text-align: left;
+}
+#posts>li:nth-child(5n+3){
+    width:20%;
+}
+#posts>li:nth-child(5n+4){
+    width:20%;
+}
+#posts>li:nth-child(5n){
+    width:10%;
+}
+
+>>>>>>> ce81260 (- Spring MVC 아키텍처 (화면계층/컨트롤러/서비스/영속성계층))

@@ -35,6 +35,7 @@ out/
 
 ### VS Code ###
 .vscode/
+<<<<<<< HEAD
 ### Example user template template
 ### Example user template
 
@@ -43,3 +44,5 @@ out/
 *.iml
 out
 gen
+=======
+>>>>>>> ce81260 (- Spring MVC 아키텍처 (화면계층/컨트롤러/서비스/영속성계층))

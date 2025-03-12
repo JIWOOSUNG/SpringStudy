@@ -4,9 +4,15 @@
 <html>
     <head>
         <meta charset="utf-8">
+<<<<<<< HEAD
         <title>main</title>
         <link rel="stylesheet" type="text/css" href="/css/posts.css">
      </head>
+=======
+        <title></title>
+        <link rel="stylesheet" type="text/css" href="/css/posts.css">
+    </head>
+>>>>>>> ce81260 (- Spring MVC 아키텍처 (화면계층/컨트롤러/서비스/영속성계층))
     <body>
     <div class="wrap">
         <h1> Spring Posts</h1>
@@ -33,7 +39,12 @@
                 <button class="btn btn-info">글쓰기</button>
                 <button class="btn btn-warning" type="reset">다시쓰기</button>
             </div>
+<<<<<<< HEAD
             </form>
             </div>
+=======
+        </form>
+</div>
+>>>>>>> ce81260 (- Spring MVC 아키텍처 (화면계층/컨트롤러/서비스/영속성계층))
     </body>
 </html>

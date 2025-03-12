@@ -1,7 +1,12 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper
+<<<<<<< HEAD
         3.0//EN"
                 "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+=======
+3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+>>>>>>> ce81260 (- Spring MVC 아키텍처 (화면계층/컨트롤러/서비스/영속성계층))
 <mapper namespace="com.kbsw.mapper.SampleMapper">
 
 </mapper>
