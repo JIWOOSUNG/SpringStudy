@@ -30,7 +30,7 @@ public class PostsServiceImpl implements PostsService{
 
     @Override
     public int getTotalCount(PagingDTO paging) {
-        return 0;
+        return postMapper.getTotalCount(paging);
     }
 
     @Override

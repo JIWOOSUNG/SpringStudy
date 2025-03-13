@@ -7,6 +7,23 @@
     <head>
         <meta charset="utf-8">
         <title></title>
+        <script>
+            const check=()=>{
+                if(!frm.findType.value || frm.findType.value=='0'){
+                    alert('검색유형을 선택하세요');
+                    frm.findType.focus();
+                    return false;
+                }
+                if(!frm.findKeyword.value.trim()){
+                    alert('검색어를 입력하세요');
+                    frm.findKeyword.focus();
+                    return false;
+                }
+
+                return true; //true반환하면 submit된다
+            }
+
+        </script>
     </head>
     <body>
         <h1 class="text-center my-3">Post List</h1>
@@ -14,6 +31,9 @@
             <div class="text-center py-3">
                 <a href="/posts/form">글쓰기</a> | <a href="/posts/list">글목록</a>
             </div>
+            <c:if test="${page.findKeyword != null and page.findKeyword != ''}">
+                <h3 class="text-secondary text-center">검색어 : ${page.findKeyword} </h3>
+            </c:if>
             <!-- 검색 form -------- -->
             <div class="py-3 text-center" id = "divFind">
                 <form name="frm" action="list" onsubmit="return check()">
@@ -56,8 +76,8 @@
                   </c:if>
              </ul>
              <div class="clear"></div>
-             <div class="total">
-                <span>총 게시글 수:   개</span>
+             <div class="total" style="display:flex; justify-content:space-around">
+                <span>총 게시글 수: ${totalCount} 개</span>
                 <span> 1 page / 3 pages</span>
              </div>
              <div class="pageNavi">

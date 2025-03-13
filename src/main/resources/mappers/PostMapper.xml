@@ -11,8 +11,32 @@
         #{originFileName:VARCHAR},#{fileSize:INTEGER})
     </insert>
 
+
+    <sql id="findWhere">
+        <if test="findType!='' and findKeyword !=''">
+            <where>
+                <if test="findType==1">
+                    title like concat('%', #{findKeyword}, '%')
+                </if>
+                <if test="findType==2">
+                    name like concat('%', #{findKeyword}, '%')
+                </if>
+                <if test="findType==3">
+                    content like concat('%', #{findKeyword}, '%')
+                </if>
+            </where>
+        </if>
+    </sql>
+
+    <select id="getTotalCount" parameterType="com.kbsw.posts.model.PagingDTO" resultType="_int">
+        select count(id) from posts
+        <include refid="findWhere" />
+    </select>
+
     <select id="listPost" parameterType="com.kbsw.posts.model.PagingDTO" resultType="PostDTO">
-        select * from posts order by id desc
+        select * from posts
+        <include refid="findWhere" />
+        order by id desc
 
     </select>
 </mapper>

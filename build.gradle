@@ -1,16 +1,5 @@
 plugins {
 	id 'java'
-<<<<<<< HEAD
-	id 'org.springframework.boot' version '3.2.4'
-	id 'io.spring.dependency-management' version '1.1.4'
-}
-
-group = 'hello'
-version = '0.0.1-SNAPSHOT'
-
-java {
-	sourceCompatibility = '17'
-=======
 	id 'org.springframework.boot' version '3.4.3'
 	id 'io.spring.dependency-management' version '1.1.7'
 }
@@ -28,7 +17,6 @@ configurations {
 	compileOnly {
 		extendsFrom annotationProcessor
 	}
->>>>>>> ce81260 (- Spring MVC 아키텍처 (화면계층/컨트롤러/서비스/영속성계층))
 }
 
 repositories {
@@ -36,11 +24,6 @@ repositories {
 }
 
 dependencies {
-<<<<<<< HEAD
-	implementation 'org.springframework.boot:spring-boot-starter-thymeleaf'
-	implementation 'org.springframework.boot:spring-boot-starter-web'
-	testImplementation 'org.springframework.boot:spring-boot-starter-test'
-=======
 	implementation 'org.springframework.boot:spring-boot-starter-web'
 	implementation 'org.mybatis.spring.boot:mybatis-spring-boot-starter:3.0.4'
 	compileOnly 'org.projectlombok:lombok'
@@ -55,7 +38,6 @@ dependencies {
 	implementation 'jakarta.servlet:jakarta.servlet-api'
 	implementation 'jakarta.servlet.jsp.jstl:jakarta.servlet.jsp.jstl-api'
 	implementation 'org.glassfish.web:jakarta.servlet.jsp.jstl'
->>>>>>> ce81260 (- Spring MVC 아키텍처 (화면계층/컨트롤러/서비스/영속성계층))
 }
 
 tasks.named('test') {

@@ -7,9 +7,7 @@ import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.ModelAttribute;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
@@ -44,9 +42,27 @@ public class PostsController {
 
     @RequestMapping(value = "/list", method = RequestMethod.GET)
     public String postsList(Model model, PagingDTO pageDto) {
-        List<PostDTO> list = postService.listPost(pageDto);
-        model.addAttribute("list", list);
+        log.info("pageDto: {}", pageDto);
+        //1. 총 게시글 수 또는 검색한 게시글 수 가져오기
+        int totalCount = postService.getTotalCount(pageDto);
 
+        //2. 게시글 (검색한 글) 가져오기
+        List<PostDTO> list = postService.listPost(pageDto);
+
+        //list.size() ==> 총 게시글 수
+        model.addAttribute("list", list);
+        model.addAttribute("totalCount", totalCount);
+        model.addAttribute("page",pageDto);
         return "posts/postsList"; // "WEB-INF/views/posts/postsList.jsp"
+    }
+
+    @GetMapping("/view")
+    public String postView(@RequestParam(defaultValue = "0")int id){
+        if(id==0){
+            return "redirect:/posts/list"; //redirect방식으로 페이지를 이동시킨다
+        }
+        //글번호로 글 내용 가져와서 Model에 저장하기
+
+        return "posts/postsView";
     }
 }
