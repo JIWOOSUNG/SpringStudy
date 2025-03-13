@@ -15,7 +15,7 @@
                 <a href="/posts/form">글쓰기</a> | <a href="/posts/list">글목록</a>
             </div>
             <!-- 검색 form -------- -->
-            <div class="py-3" id = "divFind">
+            <div class="py-3 text-center" id = "divFind">
                 <form name="frm" action="list" onsubmit="return check()">
                     <select name="findType">
                         <option value="0">::검색유형::</option>
@@ -23,6 +23,8 @@
                         <option value="2">작성자</option>
                         <option value="3">글내용</option>
                     </select>
+                    <input type="text" name="findKeyword" required placeholder="검색어 입력하세요">
+                    <button class="btn btn-info">검색</button>
                 </form>
             </div>
 

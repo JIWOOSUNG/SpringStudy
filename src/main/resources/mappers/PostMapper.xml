@@ -3,9 +3,7 @@
 3.0//EN"
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.kbsw.posts.mapper.PostMapper">
-<<<<<<< HEAD
 
-=======
 <!--    mybatis-config.xml에 com.kbsw.posts.model.PostDTO 타입을 PostDTO로 별칭 등록함-->
     <insert id="insertPost" parameterType="PostDTO">
         insert into posts(name, title, content,pwd,fileName,originFileName,fileSize)
@@ -17,5 +15,4 @@
         select * from posts order by id desc
 
     </select>
->>>>>>> ce81260 (- Spring MVC 아키텍처 (화면계층/컨트롤러/서비스/영속성계층))
 </mapper>
