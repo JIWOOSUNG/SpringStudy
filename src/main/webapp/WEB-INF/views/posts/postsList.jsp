@@ -65,7 +65,11 @@
                   <c:if test="${list !=null && not empty list}">
                     <c:forEach var="dto" items="${list}">
                           <li>${dto.getId()}</li>
-                          <li><a href="/posts/view?id=${dto.id}">${dto.getTitle()}</a></li>
+                          <li><a href="/posts/view?id=${dto.id}">
+
+                          <c:out value="${dto.getTitle()}" />
+
+                          </a></li>
                           <li>${dto.name}</li>
                           <li>
                             ${dto.wdate}

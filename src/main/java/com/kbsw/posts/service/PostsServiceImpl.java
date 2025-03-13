@@ -35,7 +35,7 @@ public class PostsServiceImpl implements PostsService{
 
     @Override
     public PostDTO findPostById(int id) {
-        return null;
+        return postMapper.findPostById(id);
     }
 
     @Override
